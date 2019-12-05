@@ -1,0 +1,95 @@
+.body_navbar_fixed_top { 
+    /*solucion para el fixed-top del navbar*/
+    padding-top: 68px; 
+}
+
+.navbar {  
+
+    background: #f85032;
+    background: -moz-linear-gradient(left, #f85032 0%, #cf4807 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #f85032), color-stop(100%, #cf4807));
+    background: -webkit-linear-gradient(left, #f85032 0%, #cf4807 100%);
+    background: -o-linear-gradient(left, #f85032 0%, #cf4807 100%);
+    background: -ms-linear-gradient(left, #f85032 0%, #cf4807 100%);
+    background: linear-gradient(to right, #f85032 0%, #cf4807 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#cf4807', GradientType=1 );
+    
+}
+
+
+/*sticky header position*/
+.sticky.is-sticky {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+#aval {
+    background-color: #ffa232;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 45px;
+    color: #FFF;
+}
+
+#infofinanciera {
+    background-color:#e0e0e0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.login_usuarios
+{
+    padding-bottom: 80px;
+    padding-top: 60px;
+}
+
+
+.servicios_bancos {
+    background-image: url("../images/bg-servicios.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    background-color:#e0e0e0;
+    padding-bottom: 80px;
+    padding-top: 80px;
+}
+
+.servicios_bancos .titulo {
+    color: #f65030;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.titulos_rojos {
+    color: #f65030;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.titulo_login {
+    color: #f65030;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.headerModal {  
+
+    background: #f85032;
+    color: #FFF;
+    background: -moz-linear-gradient(left, #f85032 0%, #cf4807 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #f85032), color-stop(100%, #cf4807));
+    background: -webkit-linear-gradient(left, #f85032 0%, #cf4807 100%);
+    background: -o-linear-gradient(left, #f85032 0%, #cf4807 100%);
+    background: -ms-linear-gradient(left, #f85032 0%, #cf4807 100%);
+    background: linear-gradient(to right, #f85032 0%, #cf4807 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#cf4807', GradientType=1 );
+    
+}

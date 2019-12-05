@@ -4,9 +4,344 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Spring BANK</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/springbank.css">
+
+
+
 </head>
-<body>
-    
+<body class="body_navbar_fixed_top">
+
+  
+
+<!-- MENU PRINCIPAL-->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+   <div class="container">
+      <a class="navbar-brand" href="index.html">
+            <img src="./images/logo.png" width="150" alt="">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+
+      <div class="collapse navbar-collapse text-md-right" id="navbarNav">
+            <ul class="navbar-nav">
+               <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Principal <span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Cuenta Sueldo</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Tarjetas</a>
+               </li>
+               <li class="nav-item">
+                <a class="nav-link" href="#">Cuentas</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Seguros</a>
+              </li>
+            </ul>
+      </div>
+   </div>   
+</nav>
+
+<!-- FIN MENU PRINCIPAL -->
+
+
+
+
+
+<!-- SLIDER PRINCIPAL -->
+<section>
+      <!--Carousel Wrapper-->
+<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+  <!--Indicators-->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel" data-slide-to="1"></li>
+    <li data-target="#carousel" data-slide-to="2"></li>
+  </ol>
+  <!--/.Indicators-->
+  <!--Slides-->
+  <div class="carousel-inner" role="listbox">
+    <!--First slide-->
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="./images/bg01.jpg"
+        alt="First slide">
+    </div>
+    <!--/First slide-->
+    <!--Second slide-->
+    <div class="carousel-item">
+      <img class="d-block w-100" src="./images/bg02.jpg"
+        alt="Second slide">
+    </div>
+    <!--/Second slide-->
+    <!--Third slide-->
+    <div class="carousel-item">
+      <img class="d-block w-100" src="./images/bg03.jpg"
+        alt="Third slide">
+    </div>
+    <!--/Third slide-->
+  </div>
+  <!--/.Slides-->
+  <!--Controls-->
+  <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  <!--/.Controls-->
+</div>
+<!--/.Carousel Wrapper-->
+      
+  </section>
+<!-- FIN SLIDER PRINCIPAL -->  
+
+
+<!-- REGISTRACION DE USUARIOS -->
+<section class="login_usuarios">
+
+  <div class="container">
+
+      <div class="row">
+
+            <div class="col-12 col-md-6 px-5">
+
+              <form class="form-signin" action="#!" >
+                <h2 class="titulos_rojos">Home Banking</h2>
+
+                <div id="form_error"></div>
+
+                <label for="var_login_cuil" class="sr-only">Ingresa tu Usuario</label>
+
+                <input type="text" id="var_login_user" name="var_login_user" class="form-control" placeholder="Ingresa tu Usuario" required>
+                <br>
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" id="var_login_password" name="var_login_password" class="form-control" placeholder="Ingresa tu Contraseña" required>
+
+                <div class="checkbox mb-3">
+                  <label>
+                    <input type="checkbox" value="remember-me"> Recordarme
+                  </label>
+                </div>
+                <button id="boton_form_login" class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
+              </form>
+
+            </div>
+
+
+            <div class="col-12 col-md-6 px-5">
+
+              <h2 class="titulos_rojos">Tu Banco Digital.</h2>
+              <h3>Ahorrá tiempo y manejá el banco estés donde estés.</h3>
+              <p>
+                  Ahora tienes la posibilidad de revisar tus cuentas desde tu casa por medio de nuestro Home Banking. Todas las posibilidades al alcance tus manos. 
+              </p>
+
+              <p>
+                  Sino no tenes tu cuenta online y sos cliente de Spring BANK podés registrarte... <br><br>
+
+                  <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalRegistracionClientes">Registrate en Spring BANK</button>
+              </p>
+
+            </div>
+
+      </div>
+  </div>    
+
+</section>
+<!-- FINAL REGISTRACION DE USUARIOS -->
+
+
+
+
+
+
+
+
+<!-- mostrar productos -->
+<div class="section servicios_bancos">
+  <div class="container">
+
+    <div class="titulo">Algunos de nuestros Servicios</div>
+
+    <div class="card-deck">
+      
+        <div class="card">
+          <img src="./images/prestamos-personales.jpg" class="card-img-top" alt="Prestamos Personales">
+          <div class="card-body">
+            <h3 class="card-title">Prestamos Personales</h3>
+            <p class="card-text">Pedilo hoy, pagalo desde 12 y hasta 72 cuotas, con tasas fijas preferenciales desde 58%. No te pierdas esta oportunidad unica de tener tu préstamos personal con Spring BANK.</p>
+
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/tarjetas-de-creditos.jpg" class="card-img-top" alt="Tarjetas de Créditos">
+          <div class="card-body">
+            <h3 class="card-title">Tarjetas de Créditos</h3>
+            <p class="card-text">Las tarjetas de crédito de Spring BANK te acercan a lo que querés.  Realizá tus compras de la forma más cómoda y con los mejores ahorros y beneficios en tus compras habituales, pagá servicios o impuestos con débito automático y cuotificá tus compras realizadas en un pago o el saldo total de tu resumen.​ </p>
+
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/cuenta-corriente.jpg" class="card-img-top" alt="Cuenta Corriente">
+          <div class="card-body">
+            <h3 class="card-title">Cuentas Corrientes</h3>
+            <p class="card-text">El dinero de la cuenta corriente se puede mantener en el banco o ser girado a través de cheques, o mediante un cajero automático, tarjeta de débito, pagos automáticos de cuentas de servicios o pagar o girar dinero hacia otras cuentas a través del sitio web del banco.</p>
+
+          </div>
+        </div>
+    </div>
+  </div>  
+</div>  
+<!-- final mostrar productos -->
+
+
+
+
+
+
+
+
+
+
+<!-- AVAL-->
+<section id="aval">
+    <div class="container">
+          <div class="row">
+             <p> NOS AVALAN <b>MAS DE 3 MESES...</b></p>
+             <br>
+             <p>EN EL MERCADO</p>
+          </div>
+    </div>
+</section>
+<!-- FINAL AVAL-->
+
+
+
+<section id="infofinanciera">
+      <div class="container">
+              <div class="row">
+                Información financiera: El otorgamiento del préstamo personal, se encuentra sujeto a calificación crediticia y condiciones de contratación. Las condiciones de los préstamos personales variarán de acuerdo a la calificación crediticia del interesado y las condiciones de mercado y políticas vigentes al momento del otorgamiento. Monto máximo $ 700.000, mínimo $ 10.000. Plazo: máximo 12 meses, mínimo 3 meses. Tasa máxima que incluye costo financiero total ANUAL para ARGENTINA (CFT). (132%). Ej. Para un préstamo de 2000 en 3 meses: Tasa Nominal Anual fija (78.8%), Costo financiero total ANUAL (132%). Ejemplo: Para un préstamo de $ 10.000,00 en tres meses abona 3 cuotas iguales y fijas de $4333, y para seis meses 6 cuotas iguales y fijas de $ 2166. La tasa será decreciente para los clientes con antigüedad y buen comportamiento de pago. Pre- cancelación: Todos los préstamos son pre cancelables abonando el interés correspondiente a la fecha del efectivo pago con más el saldo de la cuenta capital. Renovación: Abonando el 50% del préstamo podrá renovarse el mismo con la posibilidad, sujeta a aprobación, se aumentar el monto de otorgamiento. Los préstamos están disponibles para empleados en relación de dependencia. Los pagos podrán realizarse por débito automático, o en sucursales Pago Fácil, Rapipago, Cobro Express, Provincia Pagos, Ripsa Pagos y otras entidades. Para el caso de mora en el pago de las cuotas la empresa se reserva el derecho de iniciar las acciones legales extrajudiciales y judiciales pertinentes.
+              </div>
+      </div>
+</section>
+
+
+
+
+
+
+
+<!-- Modal de registracion de clientes -->
+<div class="modal fade" id="modalRegistracionClientes" tabindex="-1" role="dialog" aria-labelledby="modalRegistracionClientes" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header headerModal">
+        <h5 class="modal-title">Formulario de Registración de Clientes</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+
+        <p>
+          Estas muy cerca de formar parte de nuestra familia digital. Luego de registrarte deberas esperar la confirmación de aceptación. Uno de nuestros encargados revizará tu pedido.
+        </p>
+
+        <p>
+
+
+
+            <form class="form-signin" action="#!">
+                <div class="form-row">
+                  <div class="col-6 col-md-4 mb-3">
+                    <label for="var_register_nombre">Nombre</label>
+                    <input type="text" class="form-control" id="var_register_nombre" name="var_register_nombre" placeholder="Tu Nombre" required>
+                  </div>
+                  
+                  <div class="col-6 col-md-4 mb-3">
+                    <label for="var_register_apellido">Apellido</label>
+                    <input type="text" class="form-control" id="var_register_apellido" name="var_register_apellido" placeholder="Tu Apellido" required>
+                  </div>
+
+                  <div class="col-md-4 mb-3">
+                    <label for="var_register_user">Nombre de Usuario</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">@</span>
+                      </div>
+                      <input type="text" class="form-control" id="var_register_user" name="var_register_user" aria-describedby="var_register_user" required>
+                    </div>
+                  </div>
+                
+                </div>
+                <div class="form-row">
+                  <div class="col-12">
+                    <label for="var_register_email">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="var_register_email" name="var_register_email" required>
+                  </div>
+
+
+                  <div class="col-12 mb-3">
+                    <label for="var_register_dni">DNI</label>
+                    <input type="number" class="form-control" id="var_register_dni" name="var_register_dni" required>
+                  </div>
+
+                </div>
+                <button class="btn btn-primary" type="submit">Registrarme</button>
+              </form>
+
+
+        </p>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- final de Modal de registracion de clientes -->
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+
+
+
+<script>
+  $('#carousel').carousel({
+    interval: 2000
+  })
+</script>
+
+
+
+
+
+
+
+  
 </body>
 </html>

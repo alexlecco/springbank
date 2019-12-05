@@ -1,29 +1,28 @@
 {
-  "name": "springbank",
+  "name": "Spring-BANK-ejemplo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --watch",
-    "build-babel": "babel src -d lib --watch"
+    "start:dev": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/maxisimonazzi/springbank.git"
-  },
-  "author": "Comision 4B - El grupo mas piola",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/maxisimonazzi/springbank/issues"
-  },
-  "homepage": "https://github.com/maxisimonazzi/springbank#readme",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.7.4",
     "@babel/core": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
     "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.5",
+    "css-loader": "^3.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^1.0.0",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
   }
 }

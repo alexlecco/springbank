@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Administracion | Spring BANK</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <link rel="stylesheet" href="./css/springbank.css">
+
+</head>
+<body class="body_navbar_fixed_top">
+<!-- TOP BAR-->
+<div class="top-bar"></div>
+<!-- FINAL TOP BAR-->
+   
+
+<!-- MENU PRINCIPAL-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+   <div class="container">
+      <a class="navbar-brand" href="admin.html">
+            <img src="./images/logo.png" width="150" alt="">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+
+      <div class="collapse navbar-collapse text-md-right" id="navbarNav">
+            <ul class="navbar-nav">
+               <li class="nav-item active">
+                  <a class="nav-link" href="admin.html">Principal <span class="sr-only">(current)</span></a>
+               </li>
+            </ul>
+      </div>
+   </div>   
+</nav>
+
+<!-- FIN MENU PRINCIPAL -->
+
+
+
+
+
+
+
+<!-- breadcrumb-->
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="admin.html">Admin</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Principal</li>
+    </ol>
+</nav>
+<!-- Fin breadcrumb-->
+
+
+
+
+
+
+
+
+<section>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12 col-md-8">
+
+            <h1>Administracion Bancaria | Spring BANK</h1>
+
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit voluptate, quia odit eius reiciendis illum. Quisquam, distinctio vel, eos, quasi reiciendis labore nihil laudantium delectus recusandae nulla fugit soluta vero!</p>
+
+
+            <h2>Lista de Clientes para aprobar</h2>
+
+            <p>
+
+                <table border="1">
+                    <thead>
+                      <tr>
+                        <th> Nombre </th>
+                        <th> Apellido </th>
+                        <th> User </th>
+                        <th>  </th>
+                      </tr>
+                    </thead>
+                    <tbody id="body"></tbody>
+                  </table>
+
+            </p>
+
+        </div>
+
+        <div class="col-12 col-md-4">
+
+                <h2>Creacion de Usuarios</h2>
+                <p>Sistema manual de creacion de cuentas de usuario de Sprin BANK.</p>
+                <p>
+                        <form class="form-signin" action="#" method="post" id="formularioRegistracionManual" >
+                  
+                        <label for="var_login_user" >Nombre de usuario</label>            
+                        <input type="text" id="var_login_user" name="var_login_user" class="form-control" placeholder="Ingresa el nombre de Usuario" required >
+
+                        <br>
+                        <label for="var_login_password" >Contraseña</label>
+                        <input type="password" id="var_login_password" name="var_login_password" class="form-control" placeholder="Ingresa la Contraseña" required >
+
+                        <br>
+                        <label for="var_login_nombre" >Nombre</label>
+                        <input type="text" id="var_login_nombre" name="var_login_nombre" class="form-control" placeholder="Ingresa el nombre del cliente" required >
+
+                        <br>
+                        <label for="var_login_apellido" >Apellido</label>
+                        <input type="text" id="var_login_apellido" name="var_login_apellido" class="form-control" placeholder="Ingresa el apellido del cliente" required >
+
+                        <br>
+                        <button id="boton_admin_crea_usuario" class="btn btn-lg btn-primary btn-block" type="submit">Agregar Cliente</button>
+                      </form>
+                </p>
+    
+        </div>
+    </div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+
+</body>
+</html>
