@@ -22,9 +22,8 @@ var tableData = todosLosCliente.map( cliente => (
     <tr>
       <td>${cliente.nombre} ${cliente.apellido}</td>
       <td>${cliente.usuario}</td>
-      <td>${cliente.password}</td>
       <td>${cliente.email}</td>
-      <td> aceptar / rechazar </td>
+      <td> <button onclick="aprobarcliente()" class="btn btn-primary" >aceptar</button> </td>
     </tr>
   `
 )).join('');
