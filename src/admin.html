@@ -76,23 +76,29 @@
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit voluptate, quia odit eius reiciendis illum. Quisquam, distinctio vel, eos, quasi reiciendis labore nihil laudantium delectus recusandae nulla fugit soluta vero!</p>
 
 
+
+            <div id="tabla_clientes">
             <h2>Lista de Clientes para aprobar</h2>
 
             <p>
 
-                <table border="1">
+                <table class="table table-bordered table-dark">
                     <thead>
                       <tr>
-                        <th> Nombre </th>
-                        <th> Apellido </th>
+                        <th> Cliente </th>
                         <th> User </th>
-                        <th>  </th>
+                        <th> Email </th>
+                        <th> </th>
                       </tr>
                     </thead>
+
                     <tbody id="body"></tbody>
-                  </table>
+
+                </table>
 
             </p>
+
+          </div>
 
         </div>
 
@@ -101,7 +107,7 @@
                 <h2>Creacion de Usuarios</h2>
                 <p>Sistema manual de creacion de cuentas de usuario de Sprin BANK.</p>
                 <p>
-                        <form class="form-signin" action="#" method="post" id="formularioRegistracionManual" >
+                        <form class="form-signin" action="#!" id="formularioRegistracionManual" >
                   
                         <label for="var_login_user" >Nombre de usuario</label>            
                         <input type="text" id="var_login_user" name="var_login_user" class="form-control" placeholder="Ingresa el nombre de Usuario" required >
@@ -117,6 +123,10 @@
                         <br>
                         <label for="var_login_apellido" >Apellido</label>
                         <input type="text" id="var_login_apellido" name="var_login_apellido" class="form-control" placeholder="Ingresa el apellido del cliente" required >
+
+                        <br>
+                        <label for="var_login_email" >Email</label>
+                        <input type="email" id="var_login_email" name="var_login_email" class="form-control" placeholder="Ingresa el Email del cliente" required >
 
                         <br>
                         <button id="boton_admin_crea_usuario" class="btn btn-lg btn-primary btn-block" type="submit">Agregar Cliente</button>
