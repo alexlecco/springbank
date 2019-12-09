@@ -14,8 +14,9 @@ static registracionUsuario (var_login_user, var_login_password, var_login_nombre
 
 
 if ( clientes.verificadorUsuariosRegistrados(var_login_user, var_login_email) ) {
+
         let mensaje_error = document.getElementById('form_error_registration');                        
-        mensaje_error.innerHTML = `
+        return mensaje_error.innerHTML = `
         <div class="alert alert-danger" role="alert">
         El usuario o el mail ya estan en nuestro sistema!!!
         </div>                    

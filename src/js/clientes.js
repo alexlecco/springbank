@@ -21,7 +21,7 @@ static verificadorUsuariosRegistrados(username, email){
                 return true;            
 
             } else { 
-
+                console.log ('no encontre');
                 return false; 
             }
 
