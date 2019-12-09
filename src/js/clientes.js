@@ -32,6 +32,20 @@ static verificadorUsuariosRegistrados(username, email){
 
 
 
+static verificarLocalStorageConCarga(key){
+    if ( JSON.parse(localStorage.getItem(key)) ) {
+
+        //var clients = JSON.parse(localStorage.getItem("DB"));
+        return true;
+
+        } else {
+        //var clients = [];
+        return false;
+        }
+}
+
+
+
 
     
 }

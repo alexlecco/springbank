@@ -1,3 +1,5 @@
+import { clientes } from './clientes';
+
 //verifico si la sesion de usuario esta activa
 if (sessionStorage.getItem('usuarioActivo') === null) {
   window.location.href = "index.html";
@@ -23,7 +25,7 @@ var tableData = todosLosCliente.map( cliente => (
       <td>${cliente.nombre} ${cliente.apellido}</td>
       <td>${cliente.usuario}</td>
       <td>${cliente.email}</td>
-      <td> <button onclick="aprobarcliente()" class="btn btn-primary" >aceptar</button> </td>
+      <td><button onclick="aprobarcliente()" class="btn btn-primary" >aceptar</button> </td>
     </tr>
   `
 )).join('');
@@ -49,11 +51,11 @@ boton_admin_crea_usuario.addEventListener("click", function (event) {
     let var_login_apellido = document.querySelector("#var_login_apellido").value;
     let var_login_email = document.querySelector("#var_login_email").value;
 
-    if (JSON.parse(localStorage.getItem('DB')).filter(DB => (DB.usuario === var_login_user || DB.email === var_login_email))) {
-      console.log('Este usuario ya existe');
-      return alert("Este usuario ya existe en nuestra base de datos");
-    }
-    
+  
+
+    if ( clientes.verificadorUsuariosRegistrados(var_login_user, var_login_email) ) {
+      return alert ('El usuario o el mail ya estan registrados en nuestro sistema');
+    } 
     
     
     
