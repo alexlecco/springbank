@@ -14,21 +14,14 @@ static registracionUsuario (var_login_user, var_login_password, var_login_nombre
 
 
 if ( clientes.verificadorUsuariosRegistrados(var_login_user, var_login_email) ) {
+        let mensaje_error = document.getElementById('form_error_registration');                        
+        mensaje_error.innerHTML = `
+        <div class="alert alert-danger" role="alert">
+        El usuario o el mail ya estan en nuestro sistema!!!
+        </div>                    
+        `;
+ } 
 
-    let mensaje_error = document.getElementById('form_error_registration');                        
-    mensaje_error.innerHTML = `
-    <div class="alert alert-danger" role="alert">
-    El usuario o el mail ya estan en nuestro sistema!!!
-    </div>                    
-    `;
-    console.log('Este usuario ' + var_login_user + ' ya existe, con el mail ' + var_login_email + ' nombre: ' + var_login_nombre + ' ' + var_login_apellido);
-    return console.log ('el usuario existe en nuestra base de datos');
-
-    } 
-
-
-
-    
     if ( JSON.parse(localStorage.getItem("DB")) ) {
     var clients = JSON.parse(localStorage.getItem("DB"))
     } else {

@@ -8,12 +8,14 @@ export class clientes {
 
 static verificadorUsuariosRegistrados(username, email){
 //VERIFICO QUE NO EXISTE UN USUARIO YA REGISTRADO CON EL USUARIO O MAIL INGRESADOS
+
     if ( JSON.parse(localStorage.getItem("DB")) ) {
 
         let busqueda = false;
         busqueda = JSON.parse(localStorage.getItem('DB')).filter(DB => (DB.usuario === username || DB.email === email));
 
-            if ( busqueda ) {
+
+            if ( busqueda.length !== 0 ) {
                 
                 console.log ('encontre un valor en la DB');
                 return true;            
