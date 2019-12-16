@@ -25,13 +25,15 @@ var tableData = todosLosCliente.map( cliente => (
       <td>${cliente.nombre} ${cliente.apellido}</td>
       <td>${cliente.usuario}</td>
       <td>${cliente.email}</td>
-      <td><button onclick="aprobarcliente()" class="btn btn-primary" >aceptar</button> </td>
+      <td><button onclick= {clientes.aprobarcliente(${cliente.usuario})} class="btn btn-primary" >aceptar</button> </td>
+      
     </tr>
   `
 )).join('');
 var tbody = document.querySelector('#body');
 tbody.innerHTML = tableData;
 }
+
 
 /*//////////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////////////////////  evento de creacion de clientes de forma manual*/

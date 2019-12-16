@@ -46,6 +46,16 @@ static verificarLocalStorageConCarga(key){
 
 
 
+static aprobarcliente(user){
+
+
+    alert ('Usuario ' + user + ' Aprobado ');
+    console.log ('hola');
+
+}
+
+
+
 
     
 }
