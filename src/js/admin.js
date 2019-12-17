@@ -18,6 +18,8 @@ cargarClientesNoAprobados();
 /*///////////////////////////////////   populacion de tabla de clientes en ADMIN    */
 /*//////////////////////////////////////////////////////////////////////////////////*/ 
 function cargarClientesNoAprobados () {
+
+
 let todosLosCliente = JSON.parse(localStorage.getItem("DB"));
 var tableData = todosLosCliente.map( cliente => (
   `
@@ -25,8 +27,7 @@ var tableData = todosLosCliente.map( cliente => (
       <td>${cliente.nombre} ${cliente.apellido}</td>
       <td>${cliente.usuario}</td>
       <td>${cliente.email}</td>
-      <td><button onclick= {clientes.aprobarcliente(${cliente.usuario})} class="btn btn-primary" >aceptar</button> </td>
-      
+      <td><button onclick= "${ () => clientes.aprobarcliente(cliente.usuario)}" class="btn btn-primary" >aceptar</button> </td>
     </tr>
   `
 )).join('');
