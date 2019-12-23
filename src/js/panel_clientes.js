@@ -20,8 +20,34 @@ saludo_cliente_panel.innerHTML = `
 var boton_solicitar_prestamo = document.getElementById('boton_solicitar_prestamo');
 boton_solicitar_prestamo.addEventListener("click", function (event) {
   
-  alert(' Estas por pedir un prestamo personal ');
-  
+        // tomo el valor del input
+        let var_monto_prestamo = document.querySelector("#var_monto_prestamo").value;
+
+        // cargo los valores que tengo en mi localstorage
+        clients = JSON.parse(localStorage.getItem("DB"));
+
+        // tomo el valor del usuario activo
+        let usuarioActivo = sessionStorage.getItem('usuarioActivo')
+
+        // preparo el array con el pedido de prestamo
+        const newProduct = {type: 'prestamo', monto: var_monto_prestamo, id: Math.floor(Math.random() * 100000), estado: 'inactivo' };
+
+        // recorro el array del localstorage para saber la posicion donde esta el usuario
+        let key;
+        for(let i = 0; i < clients.length-1; i++) {
+            if(clients[i].usuario === usuarioActivo) {
+                key = i
+            }
+        }
+
+        // agrego el nuevo producto en la fila del usuario activo
+        clients[key].productos.push(newProduct);
+
+        // actualizo el localstorage con los nuevos datos
+        localStorage.setItem("DB", JSON.stringify(clients));
+
+
+        alert(' Estas por pedir un prestamo personal de $' + var_monto_prestamo + sessionStorage.getItem('usuarioActivo') ); 
 });
 
 

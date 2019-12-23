@@ -18,8 +18,6 @@ cargarClientesNoAprobados();
 /*///////////////////////////////////   populacion de tabla de clientes en ADMIN    */
 /*//////////////////////////////////////////////////////////////////////////////////*/ 
 function cargarClientesNoAprobados () {
-
-
 let todosLosCliente = JSON.parse(localStorage.getItem("DB"));
 var tableData = todosLosCliente.map( cliente => (
   `
@@ -64,7 +62,7 @@ boton_admin_crea_usuario.addEventListener("click", function (event) {
     
 
     if ( JSON.parse(localStorage.getItem("DB")) ) {
-      var clients = JSON.parse(localStorage.getItem("DB"))
+      var clients = JSON.parse(localStorage.getItem("DB"));
     } else {
       var clients = [];
     }
@@ -78,7 +76,8 @@ boton_admin_crea_usuario.addEventListener("click", function (event) {
         nombre: var_login_nombre,
         apellido: var_login_apellido,
         activo: false,
-        tipousuario: 0
+        tipousuario: 0,
+        productos: []
       });
 
 
