@@ -1,27 +1,35 @@
+// si no existe la variable de sesion del usuario logeado salgo al index.html
 if (sessionStorage.getItem('usuarioActivo') === null) {
   window.location.href = "index.html";
 }
 
+// guardo el usuario cargado en la variable de sesion
 var usuarioActivo = sessionStorage.getItem('usuarioActivo');
 
-console.log ("probando desde panel clientes " + usuarioActivo);
-
+// Saludo de bienvenida al usuario que esta legeado
 let saludo_cliente_panel = document.getElementById('saludo_cliente_panel');
-
 saludo_cliente_panel.innerHTML = `
 <div class="alert alert-success mt-3" role="alert">
   Bienvenido  <b>${usuarioActivo}</b> a tu panel de Cliente. Desde aqui puedes gestionar tu cuenta. 
 </div>
 `;
 
-
-
-
+// Accion del boton solicitar prestamo
 var boton_solicitar_prestamo = document.getElementById('boton_solicitar_prestamo');
 boton_solicitar_prestamo.addEventListener("click", function (event) {
   
         // tomo el valor del input
         let var_monto_prestamo = document.querySelector("#var_monto_prestamo").value;
+
+        if (var_monto_prestamo ==='') {
+              let mensaje_error = document.getElementById('error_prestamo');                        
+              mensaje_error.innerHTML = `
+              <div class="alert alert-danger" role="alert">
+              Debe ingresar el monto que desea para su prestamo...
+              </div>                    
+              `;
+              return false;          
+        }
 
         // cargo los valores que tengo en mi localstorage
         clients = JSON.parse(localStorage.getItem("DB"));
@@ -46,9 +54,12 @@ boton_solicitar_prestamo.addEventListener("click", function (event) {
         // actualizo el localstorage con los nuevos datos
         localStorage.setItem("DB", JSON.stringify(clients));
 
-
         alert(' Estas por pedir un prestamo personal de $' + var_monto_prestamo + sessionStorage.getItem('usuarioActivo') ); 
 });
+
+
+
+
 
 
 var boton_solicitar_tarjeta = document.getElementById('boton_solicitar_tarjeta');
