@@ -31,6 +31,7 @@ boton_solicitar_prestamo.addEventListener("click", function (event) {
               return false;          
         }
 
+        
         // cargo los valores que tengo en mi localstorage
         clients = JSON.parse(localStorage.getItem("DB"));
 
